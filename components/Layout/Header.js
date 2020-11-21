@@ -25,11 +25,15 @@ const Logo = styled.p`
     font-weight: 700;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 2rem 2rem 2rem 0;
+
+    &:hover{
+        cursor: pointer;
+    }
 `;
 
 const Header = () => {
 
-    const user = true;
+    const user = false;
 
     return (
         <header
@@ -70,12 +74,12 @@ const Header = () => {
                             </>
                         ) : (
                             <>
-                                <Link href='/'>
+                                <Link href='/login'>
                                     <Button
                                         bgColor='true'
                                     >Login</Button>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/create-account'>
                                     <Button>Crear Cuenta</Button>
                                 </Link>
                             </>
