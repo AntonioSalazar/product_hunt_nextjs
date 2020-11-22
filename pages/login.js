@@ -41,8 +41,14 @@ const Login = () =>   {
   //   }
   // }
 
-  function loginFn() {
-    console.log('login in')
+  async function loginFn() {
+    try {
+      await firebase.loginFn(email, password)
+      Router.push('/')
+    } catch (error) {
+      console.error('Hubo un error al iniciar sesion', error.message);
+      setError(error.message)
+    }
   }
 
   return (
