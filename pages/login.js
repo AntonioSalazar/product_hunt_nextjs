@@ -43,7 +43,7 @@ const Login = () =>   {
 
   async function loginFn() {
     try {
-      await firebase.loginFn(email, password)
+      await firebase.loginFn(email, password);
       Router.push('/')
     } catch (error) {
       console.error('Hubo un error al iniciar sesion', error.message);
